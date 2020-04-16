@@ -25,10 +25,8 @@ public class Example {
         System.out.println("Starting failover to secondary cluster");
         primaryRegion.close();
         primary.destroy();
-        clientCache.close();
+       // clientCache.close();
         Thread.sleep(10000);
-        ClientCacheFactory clientCacheFactory = new ClientCacheFactory();
-        clientCache = clientCacheFactory.create();
         Pool poolSecondary = PoolManager.createFactory().addLocator("localhost", 11334).create("Secondary");
         clientCache.createClientRegionFactory(ClientRegionShortcut.PROXY).setPoolName(poolSecondary.getName()).create("Test");
         Region<String, String> region = clientCache.getRegion("Test");
