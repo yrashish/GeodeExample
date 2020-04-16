@@ -24,3 +24,14 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 
+.idea/.gitignore
+.idea/GeodeExample.iml
+.idea/codeStyles/
+.idea/compiler.xml
+.idea/misc.xml
+.idea/sbt.xml
+.idea/vcs.xml
+GeodeExample.iml
+pom.xml
+src/
+target/generated-sources/
